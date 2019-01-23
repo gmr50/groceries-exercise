@@ -67,7 +67,7 @@ for product in products:
 products_set = set(products)
 for product1 in products_set
     print(product1["department"])
-
+#this is a new comment
 
 
 
