@@ -64,10 +64,27 @@ print("**************** \n")
 for product in products:
     print(product["department"])
 #want to switch list into a set, as set datatypes do not 
-products_set = set(products)
-for product1 in products_set
-    print(product1["department"])
-#this is a new comment
+#products_set = set(products)
+#for product1 in products_set
+ #   print(product1["department"])
+
+
+products_count = len(products)
+
+
+print("****************")
+print("****************")
+print("****************")
+print("****************")
+
+print("--------------")
+print("THERE ARE " + str(products_count) + " PRODUCTS:")
+print("--------------")
+
+
+for pr in products:
+    price_product = "${0:.2f}".format(pr["price"])
+    print("+ " + pr["name"] + " (" + str(price_product) + ")")
 
 
 
