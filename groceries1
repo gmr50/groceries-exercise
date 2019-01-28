@@ -108,6 +108,10 @@ print("--------------")
 print("THERE ARE "+ str(dept_count)+ " DEPARTMENTS:")
 print("--------------")
 
+departments_list.sort()
+for dept in departments_list:
+    print(dept.title())
+
 
 
 # TODO: write some Python code here to produce the desired output
