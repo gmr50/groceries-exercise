@@ -82,9 +82,31 @@ print("THERE ARE " + str(products_count) + " PRODUCTS:")
 print("--------------")
 
 
-for pr in products:
+#defining sort function
+def name_sort(product_list):
+    return product_list["name"]
+
+sorted_products = sorted(products,key=name_sort)
+
+
+for pr in sorted_products:
     price_product = "${0:.2f}".format(pr["price"])
     print("+ " + pr["name"] + " (" + str(price_product) + ")")
+
+departments_list = []
+
+#finding unique department list
+for dept in products:
+    if dept["department"] not in departments_list:
+        departments_list.append(dept["department"])
+
+dept_count = len(departments_list)
+
+
+
+print("--------------")
+print("THERE ARE "+ str(dept_count)+ " DEPARTMENTS:")
+print("--------------")
 
 
 
