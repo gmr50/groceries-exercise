@@ -108,9 +108,21 @@ print("--------------")
 print("THERE ARE "+ str(dept_count)+ " DEPARTMENTS:")
 print("--------------")
 
+#printing unique sorted departments
 departments_list.sort()
+
+products_match = 0
+
+# counting number of matching products
 for dept in departments_list:
-    print(dept.title())
+    products_match = [p for p in products if p["department"] == dept]
+    products_match_count = len(products_match)
+    if products_match_count > 1:
+        products_variable = "products"
+    else:
+        products_variable = "product"
+
+    print("+ " + dept.title() + " (" +  str(products_match_count) + " " +  products_variable + ") ")
 
 
 
