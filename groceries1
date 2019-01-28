@@ -23,61 +23,10 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
-print(products)
-#prints number of products 
-print(len(products))
-
-#prints the type of variable
-print(type(products))
-
-#prints type of the thing in the list
-print(type(products[0]))
-
-#prints name of first product
-print(products[0]["name"])
-
-#prints first product
-print(products[0])
-
-#for loop to print the name of each product
-for product in products:
-    print(product["name"])
-
-#defining a function that returns the name
-def product_name(any_product):
-    return any_product["name"]
-
-#sorts the products by product_name
-sorted_products = sorted(products, key=product_name)
-
-print("This is the alphabetical order if the names + pricesof the products \n")
-for s_product in sorted_products:
-    #when concatenating, you need to make sure that they are all the same datatype
-    print("The name is " +  s_product["name"] + " and the price is " + str(s_product["price"]))
-
-#sorted_rounded_products = [round(price,2) for price in sorted_products]
-#print(sorted_rounded_products)
-
-print("**************** \n")
-#finding unique departments
-# print the departments
-for product in products:
-    print(product["department"])
-#want to switch list into a set, as set datatypes do not 
-#products_set = set(products)
-#for product1 in products_set
- #   print(product1["department"])
-
 
 products_count = len(products)
 
 
-print("****************")
-print("****************")
-print("****************")
-print("****************")
-
-print("--------------")
 print("THERE ARE " + str(products_count) + " PRODUCTS:")
 print("--------------")
 
